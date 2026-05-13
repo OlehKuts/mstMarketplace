@@ -24,8 +24,9 @@ class App extends Component {
   render() {
     const { store } = this.props;
     const dateRetriever = (dateObject) => {
-      let [month] = dateObject.toLocaleDateString().split("/");
-      return month;
+      // let [month, day] = dateObject.toLocaleDateString().split("/");
+      let purchaseDate = dateObject.toLocaleDateString();
+      return purchaseDate;
     };
     const timeRetriever = (dateObject) => {
       let [hour, minute] = dateObject
@@ -43,7 +44,7 @@ class App extends Component {
         id: idGenerator(),
         weight: this.weightInput.value,
         releaseForm: this.releaseFormInput.value,
-        brand: this.brandInput.value
+        brand: this.brandInput.value,
       });
       e.target.reset();
       this.nameInput.focus();
@@ -145,7 +146,7 @@ class App extends Component {
           </>
         )}
         <hr />
-        <h2>Articles</h2>
+        <h4>Articles</h4>
         <table>
           <thead>
             <tr>
