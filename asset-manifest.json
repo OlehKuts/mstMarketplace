@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/mstMarketplace/static/css/main.98ebb3db.css",
+    "main.js": "/mstMarketplace/static/js/main.ffed2547.js",
+    "index.html": "/mstMarketplace/index.html",
+    "main.98ebb3db.css.map": "/mstMarketplace/static/css/main.98ebb3db.css.map",
+    "main.ffed2547.js.map": "/mstMarketplace/static/js/main.ffed2547.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.98ebb3db.css",
+    "static/js/main.ffed2547.js"
+  ]
+}
