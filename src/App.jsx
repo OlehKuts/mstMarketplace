@@ -13,9 +13,9 @@ class App extends Component {
   setOwnerMode(password) {
     if (password === "owner") {
       this.setState({ isOwner: true });
-      alert("Welcome owner!");
+      alert("Welcome, an owner!");
     } else {
-      alert("Password is wrong!");
+      alert("This password is wrong!");
     }
   }
   onLogOut() {
@@ -66,7 +66,8 @@ class App extends Component {
               <label htmlFor="login">
                 Password ("owner")
                 <input
-                  type="text"
+                  type="password"
+                  placeholder="enter password..."
                   ref={(input) => (this.passwordInput = input)}
                   id="login"
                 />
@@ -89,7 +90,7 @@ class App extends Component {
         </h4>
         {this.state.isOwner && (
           <>
-            <h2>Add new article</h2>
+            <h4>Add a new article</h4>
             <form className="addArticleForm" onSubmit={onAddSubmit}>
               <label htmlFor="name">
                 Name
@@ -234,11 +235,11 @@ class App extends Component {
         </table>
         {this.state.isOwner && (
           <>
-            <h2>
+            <h4>
               Total cost of available Articles :{" "}
               {store.itemList.allArticlesTotal().toFixed(2)}
               {store.currency}
-            </h2>
+            </h4>
           </>
         )}
         <hr />
@@ -253,10 +254,10 @@ class App extends Component {
                 </li>
               ))}
             </ul>
-            <h2>
+            <h3>
               Total to pay : {store.itemList.totalToPay().toFixed(2)}
               {store.currency}
-            </h2>
+            </h3>
             <button className="bigBtn" onClick={applyPayment}>
               Pay
             </button>
@@ -300,10 +301,10 @@ class App extends Component {
                   ))}
                 </tbody>
               </table>
-              <h2>
+              <h4>
                 Total earned : {store.paymentHistory.earnedTotal().toFixed(2)}
                 {store.currency}
-              </h2>
+              </h4>
             </div>
           </>
         )}
