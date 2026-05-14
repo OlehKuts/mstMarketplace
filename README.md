@@ -2,7 +2,7 @@
 
 A web application simulating a marketplace platform, developed for educational purposes to master Class Components in React and advanced state management with MobX. The project implements a two-role user model (Owner and Client), each featuring unique business logic and system privileges.
 
-👉 **[Live Demo Application](https://OlehKuts.github.io./todosExample)**
+👉 **[Live Demo Application](https://OlehKuts.github.io./mstMarketplace)**
 
 ---
 
